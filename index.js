@@ -2,7 +2,7 @@ import priceRoutes from './routes/price.js'
 import express from 'express';
 import mysql from 'mysql';
 import cors from 'cors';
-
+const PORT =process.env.PORT || 5000;
 const app = express();
 app.use(cors());
 
@@ -21,7 +21,7 @@ var con = mysql.createConnection({
   con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    app.listen(5000, () => {
+    app.listen(PORT, () => {
       console.log('Server is running at port 5000');
   });
   });
