@@ -11,11 +11,17 @@ app.use("/", priceRoutes);
 
 
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "password",
-     database:"node_db",
-     multipleStatements:true
+    // host: "localhost",
+    // user: "root",
+    // password: "password",
+    //  database:"node_db",
+    //  multipleStatements:true
+
+     host: "sql.freedb.tech",
+     user: "freedb_rootUser",
+     password: "w989VDX%#*H45Gc",
+      database:"freedb_priceTable",
+      multipleStatements:true
   });
   
   con.connect(function(err) {
